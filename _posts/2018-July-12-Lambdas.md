@@ -57,7 +57,7 @@ int main() {
 
    short fib = 2;
 
-   auto myFunc = [doubled](int current) {
+   auto myFunc = [fib](int current) {
        printf("Hello World! Current: %d fib: %d\n", current, fib);
        fib + fib;
    };
