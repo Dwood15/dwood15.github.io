@@ -1,0 +1,80 @@
+---
+layout: post
+title: Lambdas Variables you can assign a function to.
+---
+
+Often, an individual will be trying to learn a new programming language, or a new feature of a programming language, and will find it extremely difficult to find information on their specific topic.
+
+Or there will be information out there, but it will be complete, and you'll have questions afterwards. I know I've come across this a lot, and this blog is here to catalog a number of issues I've come across. 
+
+One such, is lambdas.
+
+What is a lambda?
+
+In C++, a lambda is a function that you can assign to a variable. In modern C++, the simplest examples look like this: 
+
+```Cpp
+auto myFunc = []() {
+ printf("Hello World!\n");
+};
+```
+
+In PHP (7+), a lambda can look like this: 
+
+```Php
+$myFunc = function() {
+ echo "Hello World!\n";
+};
+```
+
+In Javascript: 
+```Javascript
+const myFunc = function() {
+  console.log("Hello World!");
+};
+```
+
+Lambdas have some interesting properties, and I'm only going to cover them in C++ in detail, and PHP/Javascript will be covered lightly.
+
+Let's dissect the Lamda into two primary chunks, the declaration: `auto myFunc = [] () ` and the body: `{ printf("Hello World!\n"); }`.
+
+`auto` tells the cpp compiler "you know what type this is, figure it out for me please.", because lambda's don't actually have a type of their own.
+
+`[]` tells the compiler "Whatever scope we're in, any variables in here should be accessible inside this lambda." This version is empty, so if the variable is not in global/namespaced scope, the lambda has no
+access to that variable.
+
+`()` is like your standard-faire function declaration parenthesis.
+
+The body of the lambda is your regular function. If the lambda is inside a templated function, things get complicated, and I won't be covering those intricacies now.
+
+A more complicated example: 
+
+```Cpp
+//Try this out @ gcc.godbolt.org!
+//x86-64 gcc 8.1 was my version, with the compiler flags: -std=c++17 -m32
+#include <cstdio>
+int main() { 
+
+   short doubled = 2;
+
+   auto myFunc = [doubled](int current) {
+       printf("Hello World! Current: %d Doubled: %d", current, current * doubled);
+       doubled + doubled;
+   };
+
+   for(int i = 0; i < 4; i++) {
+       myFunc(i);
+   }
+}
+```
+
+In order to replicate the capture argument (the `[]`) in php, your lambda should look something like: 
+
+```Php
+$someVar = 123;
+$myFunc = function() use($someVar) {
+ echo "Hello World!\n"0;
+};
+```
+
+In Javascript, lambdas automatically have access to the variables inside the function they are defined and called from. This is the source of much heartache and pain for many users.
