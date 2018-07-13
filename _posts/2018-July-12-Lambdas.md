@@ -55,14 +55,14 @@ A more complicated example:
 #include <cstdio>
 int main() { 
 
-   short doubled = 2;
+   short fib = 2;
 
    auto myFunc = [doubled](int current) {
-       printf("Hello World! Current: %d Doubled: %d", current, current * doubled);
-       doubled + doubled;
+       printf("Hello World! Current: %d fib: %d\n", current, fib);
+       fib + fib;
    };
 
-   for(int i = 0; i < 4; i++) {
+   for(int i = 0; i < 6; i++) {
        myFunc(i);
    }
 }
