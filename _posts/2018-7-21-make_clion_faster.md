@@ -3,7 +3,7 @@ layout: post
 title: Make Clion Fast
 ---
 
-CLion is an editor based on the Jetbrains IntelliJ IDEA IDE.
+CLion is an editor based on the Jetbrains IntelliJ IDEA IDE, and if you're not careful, it can be ridiculously slow.
 
 I personally think it's worth checking out. If you're a student or you actively contribute to or represent an Open Source project, you can get licenses for free.
 
