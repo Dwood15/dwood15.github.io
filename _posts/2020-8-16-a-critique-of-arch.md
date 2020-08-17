@@ -3,7 +3,7 @@ layout: post
 title: Installing Arch, a critique of new-user-experience
 ---
 
-##Disclaimer
+## Disclaimer
 
 This blog posts, like all my others, will likely only contain partial or incomplete thoughts.
 It's going to be built purely off of my (SUBJECTIVE) experiences getting arch set up and working.
@@ -13,7 +13,7 @@ at which arch updates.
 
 ---
 
-##Preface
+## Preface
 
 First of all, Arch is not this impossible-to-approach monstrosity. Following the guide and the wiki, one can get 
 a basic, first pass system up and running with arch quite quickly... Assuming you stick with... KDE/GNOME as your
@@ -34,7 +34,7 @@ dive into it and figure out the various nasties at interplay.
 
 ---
 
-##Additional Context - Why were things so hard?
+## Additional Context - Why were things so hard?
 
 I've primarily used Ubuntu for that last year and a half, as my daily Desktop OS. It has served admirably. I've used
 the prepackaged XUbuntu, which uses XFCE as the desktop environment. I've admired how slim it was on CPU and RAM. For
@@ -72,7 +72,7 @@ spoons replenish.
 
 ---
 
-##On Discoverability
+## On Discoverability
 
 (In my definition) 
  - Discoverability means: "If the user needs to do a thing, X, how hard is it for them to figure it out on their 
@@ -122,7 +122,7 @@ they can fill in the gaps?
 This post was going to launch on a whole detailing of my travails and processes, and failures and annoyances, but 
 I didn't wan't to focus too much on specifics, because this isn't about specifics. It's about...
 
-##Lego's
+## Lego's
 
 The Arch wiki, bless those maintainers, along with most other linux documentation, is an _old_ manual for a box of
  lego's. It tells you how to plug a couple of pieces of the Lego's together, but for one reason or other, it may wind 
@@ -160,6 +160,4 @@ harm this expression and make defaulting to that state of a lack of knowledge to
 I want to see more attempts at user configuration, more attempts at making how the operating systems work, KNOWN
 to the user, during regular use of the OS, by way of good user experience and good documentation and good logging.
 
-I also want to see better online documentations.
-
-Technical Writers, this is for you!
+I also want to see better online documentation.
